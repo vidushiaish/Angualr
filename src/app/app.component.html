@@ -1,6 +1,21 @@
 <h1>Welcome to digital Calculator!</h1>
 <p>We provide you a calculator which can help you to divide any number.</p>
 
-<app-success-alert></app-success-alert>
+<!--1. Add a input field which updates a property('username') via two-way-binding  -->
+
+<label>UserName</label>
+<input type = "text" class ="form-control" 
+[(ngModel)] = "username">
+
+<!-- 2. Output the username property via String Interpolation -->
+<p>{{username}}</p>
+
+<!-- 3. Add a button which may only be clicked if the username is Not an empty string -->
+<!-- 4. Upon clicking the button, the username should be reset to an empty string -->
+
+<button type= "buttonclass" class ="btn btn-primary" [disabled]= "username ==''" (click)= "onClickEvent()">Reset</button>
+
+
+<app-success-alert></app-success-alert>	
 <hr>
 <app-warning-alert></app-warning-alert>

@@ -7,8 +7,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class WarningAlertComponent implements OnInit {
 
-  constructor() { }
 
+  constructor() { }
+warningMessage = "No Warning. All is well! :)"
+onWarningClick() {
+	this.warningMessage = "Either Zero or negative no. use!"
+}
   ngOnInit(): void {
   }
 

@@ -7,7 +7,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SuccessAlertComponent implements OnInit {
 
-  constructor() { }
+allowServer = false;
+
+
+  constructor() { 
+	
+		setTimeout(() => {
+		this.allowServer = true;
+	},2000);
+	}
+
 
   ngOnInit(): void {
   }
