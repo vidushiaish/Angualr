@@ -7,14 +7,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SuccessAlertComponent implements OnInit {
 
-allowServer = false;
-
+allowClick = false;
+number = [];
 
   constructor() { 
 	
-		setTimeout(() => {
-		this.allowServer = true;
-	},2000);
+		//setTimeout(() => {
+		//this.allowServer = true;
+	//},2000);
+	this.number.push();
+	}
+	
+	allowedClick(){
+		this.allowClick= !this.allowClick;
+		this.number.push(this.number.length +1);
 	}
 
 

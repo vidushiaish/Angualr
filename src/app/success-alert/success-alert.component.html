@@ -1,3 +1,8 @@
 <p>Enter positive number</p>
 
-<button type="button" class="btn btn-success" [disabled] = "allowServer">Success</button>
+<button type="button" class="btn btn-success" (click) = "allowedClick()">Display Details</button>
+
+<p *ngIf = "allowClick">Secret Password is Vidushi</p>
+
+<p *ngFor = "let clicks of number" [ngStyle] = "{backgroundColor: clicks>=5 ? 'blue' :'white'}" [ngClass] = "{online:  clicks>=5}">{{clicks}}</p>
+
